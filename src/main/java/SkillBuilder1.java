@@ -8,7 +8,12 @@ import java.util.Scanner;
  */
 public class SkillBuilder1 {
     public static void main(String[] args) {
-        calcWallPaint();
+       Scanner input = new Scanner(System.in);
+
+        if (input.hasNextDouble()) {
+            calcWallPaint(input);
+
+        }
     }
 
     public static void calcWallPaint() {
