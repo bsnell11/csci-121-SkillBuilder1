@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class SkillBuilder1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        //TODO : Replace this comment with your code
+        calcWallPaint();
     }
 
     public static void calcWallPaint() {
@@ -26,10 +26,20 @@ public class SkillBuilder1 {
         System.out.println("Enter wall width (feet):");
         double wallWidth = input.nextDouble();
 
+        double wallArea = wallHeight * wallWidth;
+        System.out.println("Wall area:" + wallArea + "square feet");
+
+
         // TODO: Calculate and output the wall's area
 
         // TODO: Calculate and output the amount of paint in gallons needed to paint the wall
 
-        // TODO: Calculate and output the number of 1 gallon cans needed to paint the wall, rounded up to nearest integer
+        double gallonsNeeded = wallArea / squareFeetPerGallons;
+        System.out.println("Paint needed: " + gallonsNeeded + " gallons");
+
+        // TODO: Calculate and output the number of 1 gallon cans needed to paint the wall, rounded up to nearest
+        double cansNeeded = Math.ceil(gallonsNeeded / gallonsPerCan);
+        System.out.println("Can needed: " + (int)cansNeeded + "can(s)");
+        //    //TODO : Replace this comment with your code line 12
     }
 }
