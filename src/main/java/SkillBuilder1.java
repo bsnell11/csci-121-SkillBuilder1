@@ -13,7 +13,10 @@ public class SkillBuilder1 {
 
     public static void calcWallPaint() {
         Scanner input = new Scanner(System.in);
+        calcWallPaint(input);
+    }
 
+    public static void calcWallPaint(Scanner input){
         final double squareFeetPerGallons = 350.0;
         final double gallonsPerCan = 1.0;
 
